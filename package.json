@@ -1,0 +1,19 @@
+{
+  "name": "cahoots-brewery",
+  "version": "0.0.1",
+  "description": "Website for Cahoots Brewery",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/calebmichaelsanchez/cahoots-brewery.git"
+  },
+  "author": "Caleb Sanchez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/calebmichaelsanchez/cahoots-brewery/issues"
+  },
+  "homepage": "https://github.com/calebmichaelsanchez/cahoots-brewery#readme"
+}
