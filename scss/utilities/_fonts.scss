@@ -1,0 +1,52 @@
+@font-face {
+	font-family: 'cahoots-brewery';
+	src:url('../assets/cahoots-brewery.eot?-92qmqr');
+	src:url('../assets/cahoots-brewery.eot?#iefix-92qmqr') format('embedded-opentype'),
+		url('../assets/cahoots-brewery.ttf?-92qmqr') format('truetype'),
+		url('../assets/cahoots-brewery.woff?-92qmqr') format('woff'),
+		url('../assets/cahoots-brewery.svg?-92qmqr#cahoots-brewery') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'cahoots-brewery';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-cart:before {
+	content: "\e600";
+}
+.icon-clock:before {
+	content: "\e601";
+}
+.icon-facebook:before {
+	content: "\e602";
+}
+.icon-instagram:before {
+	content: "\e603";
+}
+.icon-logo:before {
+	content: "\e604";
+}
+.icon-phone:before {
+	content: "\e605";
+}
+.icon-pin:before {
+	content: "\e606";
+}
+.icon-pinterest:before {
+	content: "\e607";
+}
+.icon-twitter:before {
+	content: "\e608";
+}

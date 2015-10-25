@@ -1,0 +1,25 @@
+// Color function
+@function color($key) {
+	@if map-has-key($colors, $key) {
+		@return map-get($colors, $key)
+	}
+
+	@warn "Unknown `#{key}` in $colors.";
+	@return null;
+}
+// Font-size function
+@function fs($key) {
+	@if map-has-key($fs, $key) {
+		@return map-get($fs, $key)
+	}
+	@warn "Unkown `#{key}` in $fs.";
+	@return null;
+}
+// Font-weight
+@function fw($key) {
+	@if map-has-key($fw, $key) {
+		@return map-get($fw, $key)
+	}
+	@warn "Unkown `#{key}` in $fw.";
+	@return null;
+}
