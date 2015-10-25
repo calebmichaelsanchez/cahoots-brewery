@@ -1,9 +1,18 @@
 {
-  "name": "www",
+  "name": "cahoots-brewery",
   "version": "0.1.0",
-  "description": "",
-  "author": "",
+  "description": "Website for Cahoots Brewery",
+  "main": "index.js",
+  "author": "Caleb Sanchez",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/calebmichaelsanchez/cahoots-brewery/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/calebmichaelsanchez/cahoots-brewery.git"
+  },
+  "homepage": "https://github.com/calebmichaelsanchez/cahoots-brewery#readme",
   "devDependencies": {
     "autoprefixer": "^6.0.3",
     "babel-core": "^5.8.25",
