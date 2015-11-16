@@ -19,10 +19,6 @@
     "babel-loader": "^5.3.2",
     "chokidar-cli": "^1.0.1",
     "eslint": "^1.5.1",
-    "node-squarespace-jsont": "^0.1.19",
-    "node-squarespace-logger": "^0.1.1",
-    "node-squarespace-middleware": "^0.2.1",
-    "node-squarespace-server": "^0.4.3",
     "parallelshell": "^2.0.0",
     "postcss-cli": "^2.1.0",
     "webpack": "^1.12.2"
@@ -34,7 +30,7 @@
   "scripts": {
     "lint:js": "eslint js",
     "build": "npm run build:js && npm run build:css",
-    "build:js": "npm run lint:js && webpack -d",
+    "build:js": "webpack -d",
     "build:css": "sass --scss $npm_package_config_scss_file $npm_package_config_css_file",
     "postbuild:css": "postcss --use autoprefixer --autoprefixer.browsers 'last 2 versions' --output $npm_package_config_css_file $npm_package_config_css_file",
     "watch": "parallelshell 'npm run watch:js' 'npm run watch:sass'",
@@ -42,6 +38,7 @@
     "watch:sass": "chokidar ./scss/* --initial -d 10 -c 'npm run build:css'"
   },
   "dependencies": {
+    "bootstrap": "^3.3.5",
     "jquery": "^2.1.4"
   }
 }

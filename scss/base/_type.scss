@@ -9,8 +9,11 @@ h2, h3, h4, h5, h6, p {
 }
 h1 {
 	@extend %ff-secondary;
-	@extend %fw-normal;
+	@extend %fw-bold;
 	font-size: fs(h1);
+	color: color(creme-primary);
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
 }
 h2 {
 	@extend %fw-bold;
@@ -31,4 +34,6 @@ h5 {
 p {
 	@extend %fw-normal;
 	font-size: fs(p);
+	color: color(creme-primary);
+	line-height: 3.75rem;
 }

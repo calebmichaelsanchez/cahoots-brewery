@@ -1,3 +1,11 @@
+%clearfix {
+	&:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
 %fw-normal {
 	font-weight: fw(normal);
 }

@@ -1,15 +1,3 @@
-import $ from "jquery";
+import nav from "./menus/nav";
 
-const toggleNav = function () {
-  const toggle = $(".nav-toggle");
-  const nav = $("nav");
-
-  $(toggle).click((e) => {
-    e.preventDefault();
-    $(nav).toggleClass("open");
-  });
-};
-
-$(document).ready(() => {
-  toggleNav();
-});
+nav.init();

@@ -1,3 +1,33 @@
 section {
 	width: 100%;
+  padding-top: 2.6875rem;
+  padding-bottom: 2.6875rem;
+  &:first-of-type {
+    padding-top: 7.375rem;
+  }
+  &:last-of-type {
+    padding-bottom: 7.375rem;
+  }
+  h1 {
+    position: relative;
+    text-align: center;
+    &:after {
+      content: '';
+      positon: relative;
+      display: block;
+      margin: 0 auto;
+      width: 14.6875rem;
+      height: 0.25rem;
+      background-color: color(creme-primary);
+      margin-top: 1.875rem;
+    }
+  }
+}
+[class$="description"] {
+  text-align: center;
+  padding-top: 4.375rem;
+}
+.container-item {
+  padding-left: 4.6875rem;
+  padding-right: 4.6875rem;
 }

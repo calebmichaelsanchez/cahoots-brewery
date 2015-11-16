@@ -2,13 +2,16 @@ nav {
 	display: block;
 	position: relative;
 	width: 100%;
+	max-height: 69px;
+	z-index: 1000;
 }
 .nav-header {
 	padding: 1rem;
 	transition: background-color 0.4s ease;
+	@extend %clearfix;
 	&-item {
-		display: inline-block;
-		vertical-align: middle;
+		display: block;
+		float: left;
 		width: 50%;
 		&:last-of-type {
 			@extend %text-right;
@@ -30,10 +33,11 @@ nav {
 	transition: visibility 0s linear 0s, opacity 0.4s;
 }
 .nav-toggle {
-	display: block;
+	display: inline-block;
 	width: 30px;
 	height: 20px;
 	padding-top: 9px;
+	vertical-align: middle;
 	@extend %align-right;
 }
 .burger {
@@ -61,13 +65,18 @@ nav {
 	}
 }
 .nav-menu {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
 	padding-left: 1em;
 	padding-right: 1em;
 	padding-bottom: 1em;
 	background-color: color(creme-primary);
 	opacity: 0;
+	transform: translateY(-200%);
 	visibility: hidden;
-	transition: visibility 0s linear 0.4s, opacity 0.4s ease;
+	transition: visibility 0s linear 0.4s, opacity 0.4s ease, transform 0s linear 0.4s;
 }
 .nav-menu-item {
 	a {
@@ -75,6 +84,7 @@ nav {
 	}
 }
 .open {
+	max-height: 1000px;
 	.nav-header { background-color: color(creme-primary); }
 	.nav-header:after {
 		border-color: rgba(color(gray-secondary), .2);
@@ -95,8 +105,9 @@ nav {
 		&:after { transform: rotate(-45deg); }
 	}
 	.nav-menu {
+		transform: translateY(0);
 		opacity: 1;
 		visibility: visible;
-		transition: visibility 0s linear 0s, opacity 0.4s ease;
+		transition: visibility 0s linear 0s, opacity 0.4s ease, transform 0s linear 0s;
 	}
 }

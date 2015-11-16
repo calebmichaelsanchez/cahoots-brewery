@@ -1,0 +1,22 @@
+.hero-main {
+	width: 100%;
+	min-height: 50vh;
+	background-image: url('../assets/brewery.jpg');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	@include ghost(center, 50vh);
+	@include respond-to(breakpoint) {
+		min-height: 50vh;
+		&:before {
+			height: 100vh;
+		}
+	}
+}
+.hero-meta {
+	font-size: fs(hero);
+	color: color(creme-primary);
+	font-weight: fw(bold);
+	text-transform: uppercase;
+	line-height: normal;
+}

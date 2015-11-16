@@ -1,3 +1,18 @@
+@mixin ghost($text-align: center, $height: 100%) {
+  text-align: $text-align;
+  &:before {
+    content: '';
+    height: $height;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: -0.025em;
+  }
+  > div {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+  }
+}
 // Media query management
 
 $breakpoints: (
