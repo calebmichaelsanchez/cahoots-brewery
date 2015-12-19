@@ -4,6 +4,10 @@ a {
 	text-decoration: none;
 	color: color(creme-primary);
 }
+h1, h2, h3, h4, h5, h6, p {
+	padding: 0;
+	margin: 0;
+}
 h2, h3, h4, h5, h6, p {
 	@extend %ff-primary;
 }
@@ -14,6 +18,7 @@ h1 {
 	color: color(creme-primary);
 	text-transform: uppercase;
 	letter-spacing: 0.2rem;
+	margin-bottom: 2.1875rem;
 }
 h2 {
 	@extend %fw-bold;
@@ -22,10 +27,12 @@ h2 {
 h3 {
 	@extend %fw-bold;
 	font-size: fs(h3);
+	letter-spacing: 0.12rem;
 }
 h4 {
 	@extend %fw-semi-bold;
 	font-size: fs(h4);
+	letter-spacing: 0.12rem;
 }
 h5 {
 	@extend %fw-semi-bold;
@@ -35,5 +42,9 @@ p {
 	@extend %fw-normal;
 	font-size: fs(p);
 	color: color(creme-primary);
-	line-height: 3.75rem;
+	line-height: 1.875rem;
+	margin-bottom: 2.5rem;
+	&:last-of-type {
+		margin-bottom: 0;
+	}
 }

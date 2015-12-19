@@ -1,33 +1,47 @@
 section {
 	width: 100%;
-  padding-top: 2.6875rem;
-  padding-bottom: 2.6875rem;
+  padding-top: 1.34375rem;
+  padding-bottom: 1.34375rem;
   &:first-of-type {
-    padding-top: 7.375rem;
+    padding-top: 3.6875rem;
   }
   &:last-of-type {
-    padding-bottom: 7.375rem;
+    padding-bottom: 3.6875rem;
   }
   h1 {
     position: relative;
     text-align: center;
     &:after {
       content: '';
-      positon: relative;
+      position: relative;
       display: block;
       margin: 0 auto;
-      width: 14.6875rem;
-      height: 0.25rem;
+      width: 7.34375rem;
+      height: 0.125rem;
       background-color: color(creme-primary);
-      margin-top: 1.875rem;
+      margin-top: 0.9375rem;
     }
   }
 }
-[class$="description"] {
+[class$="-description"] {
   text-align: center;
-  padding-top: 4.375rem;
+  padding-top: 2.1875rem;
+  @include respond-to(breakpoint) {
+    width: (1000 / 1400) * 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
 }
 .container-item {
-  padding-left: 4.6875rem;
-  padding-right: 4.6875rem;
+  @extend %padding-left-right;
+}
+[class$="-container"] {
+  width: 100%;
+  margin-bottom: 1.25rem;
+  @include respond-to(breakpoint) {
+    width: (1260 / 1400) * 100%;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

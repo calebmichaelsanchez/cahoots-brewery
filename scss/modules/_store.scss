@@ -1,0 +1,14 @@
+.store-teaser {
+  width: 100%;
+  position: relative;
+  padding: 2.5rem 1rem;
+  text-align: center;
+  background-color: color(creme-primary);
+  &__btn {
+    position: absolute;
+    bottom: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: color(red-primary);
+  }
+}

@@ -7,9 +7,9 @@
 	background-size: cover;
 	@include ghost(center, 50vh);
 	@include respond-to(breakpoint) {
-		min-height: 50vh;
+		min-height: 95vh;
 		&:before {
-			height: 100vh;
+			height: 95vh;
 		}
 	}
 }

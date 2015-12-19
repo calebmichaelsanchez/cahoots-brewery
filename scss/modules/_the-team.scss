@@ -1,0 +1,50 @@
+.employee-container {
+  @extend %padding-left-right;
+  font-size: 0;
+  width: 100%;
+}
+.employee {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  overflow: hidden;
+  margin-bottom: 2.34375rem;
+  width: 100%;
+  @include respond-to(mid-m) {
+    width: 50%;
+    padding: 1.375rem;
+  }
+  @include respond-to(l) {
+    width: 25%;
+  }
+}
+.employee__meta {
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  top: 0;
+  height: 100%;
+  left: 0;
+  padding: 1.5625rem 1.375rem;
+  background-color: rgba(color(black), .6);
+  z-index: 5;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  @include ghost;
+  &:hover {
+    opacity: 1;
+  }
+  .touch & {
+    position: relative;
+    opacity: 1;
+    display: block;
+    margin-top: 0rem;
+    text-align: left;
+    padding: 1rem 0 0;
+  }
+  h2 {
+    text-transform: uppercase;
+    color: color(creme-primary);
+    letter-spacing: 0.12rem;
+  }
+}

@@ -31,7 +31,7 @@
     "lint:js": "eslint js",
     "build": "npm run build:js && npm run build:css",
     "build:js": "webpack -d",
-    "build:css": "sass --scss $npm_package_config_scss_file $npm_package_config_css_file",
+    "build:css": "sass --sourcemap=none --scss $npm_package_config_scss_file $npm_package_config_css_file",
     "postbuild:css": "postcss --use autoprefixer --autoprefixer.browsers 'last 2 versions' --output $npm_package_config_css_file $npm_package_config_css_file",
     "watch": "parallelshell 'npm run watch:js' 'npm run watch:sass'",
     "watch:js": "chokidar ./js/* --initial -d 10 -c 'npm run build:js'",

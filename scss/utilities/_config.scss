@@ -7,14 +7,24 @@ $fw: (
 	bold: 700
 );
 
+// $fs: (
+// 	hero: 5rem,
+// 	h1: 4rem,
+// 	h2: 3.75rem,
+// 	h3: 3rem,
+// 	h4: 2.5rem,
+// 	h5: 2.25rem,
+// 	p: 2.125rem
+// );
+// half
 $fs: (
-	hero: 5rem,
-	h1: 4rem,
-	h2: 3.75rem,
-	h3: 3rem,
-	h4: 2.5rem,
-	h5: 2.25rem,
-	p: 2.125rem
+	hero: 2.5rem,
+	h1: 2rem,
+	h2: 1.875rem,
+	h3: 1.5rem,
+	h4: 1.25rem,
+	h5: 1.125rem,
+	p: 1.125rem
 );
 
 $colors: (
@@ -24,5 +34,6 @@ $colors: (
 	brown-primary: #24211f,
 	brown-secondary: #484544,
 	gray-primary: #797572,
-	gray-secondary: #a39f98
+	gray-secondary: #a39f98,
+	black: #242424
 );

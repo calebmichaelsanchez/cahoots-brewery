@@ -10,13 +10,16 @@
   > div {
     display: inline-block;
     vertical-align: middle;
-    width: 100%;
   }
 }
 // Media query management
 
 $breakpoints: (
-  'breakpoint'	: ( min-width: 768px)
+  'xs' : ( min-width: 540px ),
+  's' : ( min-width: 620px ),
+  'mid-m' : (min-width: 700px),
+  'breakpoint'	: ( min-width: 768px),
+  'l' : (min-width: 1024px)
 );
 
 @mixin respond-to($name) {
