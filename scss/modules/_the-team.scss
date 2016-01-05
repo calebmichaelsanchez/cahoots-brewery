@@ -1,5 +1,4 @@
 .employee-container {
-  @extend %padding-left-right;
   font-size: 0;
   width: 100%;
 }
@@ -8,14 +7,23 @@
   display: inline-block;
   vertical-align: top;
   overflow: hidden;
-  margin-bottom: 2.34375rem;
+  margin-bottom: rem-calc(40);
   width: 100%;
   @include respond-to(mid-m) {
-    width: 50%;
-    padding: 1.375rem;
+    width: 48%;
+    margin-right: 4%;
+    &:nth-of-type(2n + 2) {
+      margin-right: 0;
+    }
   }
   @include respond-to(l) {
-    width: 25%;
+    width: 22%;
+    &:nth-of-type(2n + 2) {
+      margin-right: 4%;
+    }
+    &:nth-of-type(4n + 4) {
+      margin-right: 0;
+    }
   }
 }
 .employee__meta {

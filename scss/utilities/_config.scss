@@ -7,24 +7,22 @@ $fw: (
 	bold: 700
 );
 
-// $fs: (
-// 	hero: 5rem,
-// 	h1: 4rem,
-// 	h2: 3.75rem,
-// 	h3: 3rem,
-// 	h4: 2.5rem,
-// 	h5: 2.25rem,
-// 	p: 2.125rem
-// );
-// half
+$hero : rem-calc(48);
+$h1   : rem-calc(32);
+$h2   : rem-calc(21);
+$h3   : rem-calc(18);
+$h4   : rem-calc(14);
+$h5   : rem-calc(18);
+$p    : rem-calc(18);
+
 $fs: (
-	hero: 2.5rem,
-	h1: 2rem,
-	h2: 1.875rem,
-	h3: 1.5rem,
-	h4: 1.25rem,
-	h5: 1.125rem,
-	p: 1.125rem
+	hero : $hero,
+	h1   : $h1,
+	h2   : $h2,
+	h3   : $h3,
+	h4   : $h4,
+	h5   : $h5,
+	p    : $p
 );
 
 $colors: (

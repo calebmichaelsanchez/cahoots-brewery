@@ -18,11 +18,12 @@ h1 {
 	color: color(creme-primary);
 	text-transform: uppercase;
 	letter-spacing: 0.2rem;
-	margin-bottom: 2.1875rem;
+	margin-bottom: rem-calc(40);
 }
 h2 {
 	@extend %fw-bold;
 	font-size: fs(h2);
+	letter-spacing: 0.12rem;
 }
 h3 {
 	@extend %fw-bold;

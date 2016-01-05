@@ -1,0 +1,11 @@
+.btn {
+  display: inline-block;
+  padding: rem-calc(22) rem-calc(40);
+  font-size: fs(p);
+  line-height: 1;
+  text-decoration: none;
+  &--primary {
+    color: color(creme-primary);
+    background-color: color(red-primary);
+  }
+}

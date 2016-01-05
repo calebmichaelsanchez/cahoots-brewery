@@ -1,12 +1,12 @@
 section {
 	width: 100%;
-  padding-top: 1.34375rem;
-  padding-bottom: 1.34375rem;
+  padding-top: rem-calc(35);
+  padding-bottom: rem-calc(35);
   &:first-of-type {
-    padding-top: 3.6875rem;
+    padding-top: rem-calc(70);
   }
   &:last-of-type {
-    padding-bottom: 3.6875rem;
+    padding-bottom: 0;
   }
   h1 {
     position: relative;
@@ -15,21 +15,21 @@ section {
       content: '';
       position: relative;
       display: block;
-      margin: 0 auto;
-      width: 7.34375rem;
-      height: 0.125rem;
+      width: rem-calc(118);
+      height: rem-calc(2);
       background-color: color(creme-primary);
-      margin-top: 0.9375rem;
+      margin-top: rem-calc(15);
+      @extend %align-center;
     }
   }
 }
 [class$="-description"] {
   text-align: center;
-  padding-top: 2.1875rem;
+  padding-top: rem-calc(40);
+  @extend %align-center;
   @include respond-to(breakpoint) {
-    width: (1000 / 1400) * 100%;
-    max-width: 1000px;
-    margin: 0 auto;
+    width: (1000 / 1440) * 100%;
+    max-width: rem-calc(1000);
   }
 }
 .container-item {
@@ -37,11 +37,13 @@ section {
 }
 [class$="-container"] {
   width: 100%;
-  margin-bottom: 1.25rem;
+  @extend %align-center;
+  @extend %padding-left-right;
   @include respond-to(breakpoint) {
-    width: (1260 / 1400) * 100%;
-    max-width: 1440px;
-    margin-left: auto;
-    margin-right: auto;
+    width: (1260 / 1440) * 100%;
+    max-width: rem-calc(1260);
+  }
+  @media screen and (min-width: 1400px) {
+    max-width: rem-calc(2200);
   }
 }

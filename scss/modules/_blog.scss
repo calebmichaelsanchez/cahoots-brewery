@@ -1,0 +1,90 @@
+.blog-list {
+  &-container {
+    font-size: 0;
+    padding-top: rem-calc(60) !important;
+    padding-bottom: rem-calc(60) !important;
+  }
+  &__item {
+    width: 33.33%;
+    display: inline-block;
+    padding-left: rem-calc(20);
+    padding-right: rem-calc(20);
+    vertical-align: top;
+    margin-bottom: rem-calc(50);
+    &-title {
+      font-size: rem-calc(32);
+      text-transform: uppercase;
+      font-weight: fw(bold);
+      letter-spacing: 0.12rem;
+      margin-top: rem-calc(20);
+      a {color: color(red-primary);}
+    }
+    &-date {
+      font-size: rem-calc(20);
+      text-transform: uppercase;
+      color: color(creme-primary);
+      letter-spacing: 0.12rem;
+      margin-top: rem-calc(10);
+      margin-bottom: rem-calc(12);
+    }
+    &-read-more {
+      font-size: fs(p);
+      color: color(red-primary);
+      text-decoration: underline;
+    }
+  }
+  &__pagination {
+    width: 100%;
+    font-size: rem-calc(14);
+    text-align: center;
+    &--disabled { display: none; }
+    &-item {
+      display: inline-block;
+    }
+    &-next {
+      margin-left: rem-calc(15);
+    }
+    &-prev {
+      margin-right: rem-calc(15);
+    }
+    .icon {
+      display: inline-block;
+      vertical-align: middle;
+      width: rem-calc(30);
+      height: rem-calc(30);
+      svg path { fill: color(creme-primary); }
+      &-previous {
+        margin-right: rem-calc(10);
+      }
+      &-next {
+        margin-left: rem-calc(10);
+      }
+    }
+  }
+}
+.blog-item {
+  &-container {
+    padding-bottom: rem-calc(120) !important;
+  }
+  &-hero {
+    height: rem-calc(570);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: rem-calc(40);
+  }
+  &__title {
+    font-size: fs(h1);
+    color: color(red-primary);
+    margin-bottom: rem-calc(20);
+    text-transform: uppercase;
+    font-weight: fw(bold);
+    letter-spacing: 0.12rem;
+  }
+  &__date {
+    font-size: rem-calc(20);
+    color: color(creme-primary);
+    margin-bottom: rem-calc(25);
+    text-transform: uppercase;
+  }
+}

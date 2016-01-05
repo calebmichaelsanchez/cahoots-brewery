@@ -1,21 +1,25 @@
 .events-container {
-  width: 100%;
-  @extend %padding-left-right;
+  h4 {
+    letter-spacing: 0;
+    text-align: center;
+    color: color(creme-primary);
+  }
 }
 .event {
   display: inline-block;
   vertical-align: top;
   width: 100%;
   border-top: 1px solid color(gray-primary);
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
+  padding-top: rem-calc(20);
+  padding-bottom: rem-calc(20);
   &:last-of-type {
     border-bottom: 1px solid color(gray-primary);
   }
   @include respond-to(breakpoint) {
     width: 50%;
-    padding: 1rem;
+    padding: 0 rem-calc(16);
     border: none;
+    margin-bottom: rem-calc(40);
     &:last-of-type {
       border: none;
     }
@@ -52,6 +56,9 @@
     }
   }
   .excerpt {
-    max-width: 25rem;
+    max-width: rem-calc(400);
+    @include respond-to(l) {
+      max-width: 100%;
+    }
   }
 }

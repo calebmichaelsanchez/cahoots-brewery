@@ -1,0 +1,77 @@
+.footer {
+  text-align: center;
+  font-size: 0;
+  padding-bottom: rem-calc(60);
+  &__map {
+    height: rem-calc(200);
+    background: url("/assets/map.jpg") no-repeat center center;
+    background-size: cover;
+  }
+  &__title {
+    font-size: fs(h1);
+    color: color(creme-primary);
+    font-family: $ff-secondary;
+    text-transform: uppercase;
+    letter-spacing: 0.12rem;
+    text-align: center;
+    line-height: 1;
+    margin-top: rem-calc(50);
+    margin-bottom: rem-calc(50);
+  }
+  &__meta {
+    width: 100%;
+    @extend %align-center;
+    @extend %padding-left-right;
+    @include respond-to(breakpoint) {
+      width: (1260 / 1440) * 100%;
+      max-width: rem-calc(1260);
+    }
+    @media screen and (min-width: 1400px) {
+      max-width: rem-calc(2200);
+    }
+  }
+  &__item {
+    display: inline-block;
+    vertical-align: middle;
+    width: 33.33%;
+    font-size: fs(p);
+    color: color(creme-primary);
+    text-align: center;
+    svg path { fill: color(red-primary); }
+    &-meta {
+      margin-top: rem-calc(25);
+      span {
+        display: block;
+      }
+    }
+  }
+  &__icon {
+    display: inline-block;
+    &-clock { width: rem-calc(35); height: rem-calc(35); }
+    &-phone { width: rem-calc(39); height: rem-calc(25); }
+    &-pin { width: rem-calc(22); height: rem-calc(36); }
+  }
+  &-social {
+    width: 100%;
+    text-align: center;
+    padding-top: rem-calc(75);
+    &__item {
+      display: inline-block;
+      margin-right: 50px;
+      &:last-of-type {
+        margin-right: 0;
+      }
+      svg {
+        width: 35px;
+        height: 35px;
+      }
+      svg path {
+        transition: 0.4s ease;
+        fill: color(gray-primary);
+      }
+      svg:hover path {
+        fill: color(red-primary);
+      }
+    }
+  }
+}

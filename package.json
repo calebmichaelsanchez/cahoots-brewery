@@ -38,7 +38,11 @@
     "watch:sass": "chokidar ./scss/* --initial -d 10 -c 'npm run build:css'"
   },
   "dependencies": {
+    "axios": "^0.8.1",
     "bootstrap": "^3.3.5",
-    "jquery": "^2.1.4"
+    "jquery": "^2.1.4",
+    "react": "^0.14.5",
+    "react-dom": "^0.14.5",
+    "react-slick": "^0.9.3"
   }
 }
