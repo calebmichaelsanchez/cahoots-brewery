@@ -18,10 +18,8 @@ const hours = {
       },
       complete: function() {
         let businessHours = res.websiteSettings.businessHours;
-        console.log(businessHours);
         let day;
         let text;
-        console.log(new Date().getDay());
         switch (new Date().getDay()) {
           case 0:
             day = "sunday";

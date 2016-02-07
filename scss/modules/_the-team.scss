@@ -10,20 +10,11 @@
   margin-bottom: rem-calc(40);
   width: 100%;
   @include respond-to(mid-m) {
-    width: 48%;
-    margin-right: 4%;
-    &:nth-of-type(2n + 2) {
-      margin-right: 0;
-    }
+    width: 50%;
+    padding: rem-calc(15);
   }
   @include respond-to(l) {
-    width: 22%;
-    &:nth-of-type(2n + 2) {
-      margin-right: 4%;
-    }
-    &:nth-of-type(4n + 4) {
-      margin-right: 0;
-    }
+    width: 25%;
   }
 }
 .employee__meta {

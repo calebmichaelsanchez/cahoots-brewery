@@ -1,0 +1,57 @@
+.map {
+  height: rem-calc(450);
+}
+.info-wrapper {
+  padding: rem-calc(10);
+}
+.info {
+  &:last-of-type {
+    .info-title {
+      margin-top: rem-calc(20);
+    }
+  }
+  &-title {
+    color: color(red-primary);
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0.12rem;
+    font-weight: fw(bold);
+  }
+  &-address, p {
+    font-size: rem-calc(16);
+    color: color(brown-secondary);
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-weight: fw(normal);
+    &:first-of-type {
+      margin-bottom: rem-calc(3);
+    }
+  }
+}
+.locator {
+  position: relative;
+}
+.location-selectors {
+  position: absolute;
+  left: 50%;
+  bottom: rem-calc(50);
+  transform: translateX(-50%);
+}
+.location-selector {
+  padding: rem-calc(15) rem-calc(30);
+  font-size: rem-calc(18);
+  color: color(creme-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.12rem;
+  border: rem-calc(1) solid color(creme-primary);
+  transition: 0.4s ease;
+  &:first-of-type {
+    margin-right: rem-calc(10);
+  }
+  &:hover {
+    border-color: color(red-primary);
+    background-color: color(red-primary);
+  }
+}

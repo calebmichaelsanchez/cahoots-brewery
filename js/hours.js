@@ -3,7 +3,7 @@ const hours = {
     this.getHours();
   },
   getHours () {
-    console.log("hours");
+    //console.log("hours");
   }
 };
 

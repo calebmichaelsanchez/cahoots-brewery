@@ -1,16 +1,13 @@
 .hero-main {
 	width: 100%;
-	min-height: 50vh;
+	height: 50%;
 	background-image: url('../assets/brewery.jpg');
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	@include ghost(center, 50vh);
+	@include ghost(center, 100%);
 	@include respond-to(breakpoint) {
-		min-height: 95vh;
-		&:before {
-			height: 95vh;
-		}
+		height: 95%;
 	}
 }
 .hero-meta {
