@@ -1,20 +1,24 @@
 import React, { Component } from "react";
 import axios from "axios";
-import SliderItem from "./SliderItem";
+import EventsList from "./EventsList";
 
-class SliderContainer extends Component {
-  constructor(props) {
-    super(props);
+class EventsContainer extends Component {
+  constructor() {
+    super();
     this.state = {
-      items: []
+      upcoming: [],
+      past: [],
+      title: ""
     }
   }
   componentDidMount() {
-    axios(this.props.url + "?format=json")
+    axios("/events?format=json")
       .then((response) => {
         console.log(response);
         this.setState({
-          items: response.data.items
+          upcoming: response.data.upcoming,
+          past: response.data.past,
+          title: response.data.collection.title
         });
       })
       .catch((response) => {
@@ -24,13 +28,9 @@ class SliderContainer extends Component {
   }
   render() {
     return (
-      <SliderItem items={this.state.items} />
+      <EventsList {...this.state} />
     );
   }
 }
 
-SliderContainer.propTypes = {
-  url: React.PropTypes.string.isRequired
-}
-
-export default SliderContainer;
+export default EventsContainer;

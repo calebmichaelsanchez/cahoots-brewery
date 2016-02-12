@@ -1,6 +1,7 @@
 .btn {
   display: inline-block;
-  padding: rem-calc(22) rem-calc(40);
+  min-width: rem-calc(200);
+  padding: rem-calc(22) rem-calc(10);
   font-size: fs(p);
   line-height: 1;
   text-decoration: none;

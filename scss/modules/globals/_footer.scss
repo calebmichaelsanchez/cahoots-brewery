@@ -33,10 +33,18 @@
   &__item {
     display: inline-block;
     vertical-align: middle;
-    width: 33.33%;
+    width: 100%;
     font-size: fs(p);
     color: color(creme-primary);
     text-align: center;
+    padding-bottom: rem-calc(40);
+    &:last-of-type {
+      padding-bottom: 0;
+    }
+    @include respond-to(s) {
+      width: 33.33%;
+      padding-bottom: 0;
+    }
     svg path { fill: color(red-primary); }
     &-meta {
       margin-top: rem-calc(25);
@@ -47,6 +55,7 @@
   }
   &__icon {
     display: inline-block;
+    font-size: 0;
     &-clock { width: rem-calc(35); height: rem-calc(35); }
     &-phone { width: rem-calc(39); height: rem-calc(25); }
     &-pin { width: rem-calc(22); height: rem-calc(36); }
@@ -57,7 +66,10 @@
     padding-top: rem-calc(75);
     &__item {
       display: inline-block;
-      margin-right: 50px;
+      margin-right: rem-calc(35);
+      @include respond-to(s) {
+        margin-right: rem-calc(50);
+      }
       &:last-of-type {
         margin-right: 0;
       }

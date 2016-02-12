@@ -1,4 +1,7 @@
 .events-container {
+  @include respond-to(breakpoint) {
+    max-width: (1024 / 1440) * 100%;
+  }
   h4 {
     letter-spacing: 0;
     text-align: center;
@@ -6,59 +9,68 @@
   }
 }
 .event {
+  position: relative;
   display: inline-block;
   vertical-align: top;
   width: 100%;
   border-top: 1px solid color(gray-primary);
-  padding-top: rem-calc(20);
-  padding-bottom: rem-calc(20);
+  transition: 0.4s ease;
+  overflow: hidden;
+  &.active:before {
+    transform-origin: 50% 50%;
+    transform: rotate(90deg);
+  }
   &:last-of-type {
     border-bottom: 1px solid color(gray-primary);
   }
-  @include respond-to(breakpoint) {
-    width: 50%;
-    padding: 0 rem-calc(16);
-    border: none;
-    margin-bottom: rem-calc(40);
-    &:last-of-type {
-      border: none;
-    }
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    background-color: color(gray-primary);
   }
-  @include respond-to(l) {
-    width: 33.33%;
+  &:before {
+    width: rem-calc(1);
+    height: rem-calc(18);
+    right: rem-calc(9);
+    top: rem-calc(23);
+    transition: 0.4s ease;
+  }
+  &:after {
+    width: rem-calc(18);
+    height: rem-calc(1);
+    right: 0;
+    top: rem-calc(31);
   }
 }
 .event__title {
-  padding-left: 1.25rem;
+  padding-top: rem-calc(20);
+  padding-bottom: rem-calc(20);
+  padding-left: rem-calc(20);
+  padding-right: rem-calc(28);
   h5 {
     color: color(red-primary);
     text-transform: uppercase;
   }
 }
 .event__meta {
-  padding-left: 1.25rem;
   overflow: hidden;
-  display: none;
-  @include respond-to(breakpoint) {
-    display: block !important;
-  }
-  //transition: all 0.4s ease;
-  // .event--open & {
-  //   max-height: 300px;
-  // }
+  display: block;
+  padding-left: rem-calc(20);
+  padding-bottom: rem-calc(20);
   .address {
     color: color(creme-primary);
     text-transform: uppercase;
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
+    padding-top: rem-calc(20);
     h5 {
       font-weight: fw(normal);
     }
   }
   .excerpt {
-    max-width: rem-calc(400);
-    @include respond-to(l) {
-      max-width: 100%;
-    }
+    @extend p;
+    //padding-top: 1.25rem;
+    // max-width: rem-calc(400);
+    // @include respond-to(l) {
+    //   max-width: 100%;
+    // }
   }
 }

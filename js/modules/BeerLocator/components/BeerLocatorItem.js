@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import helpers from "../../utils/helpers";
+import helpers from "../../../utils/helpers";
 
 class BeerLocatorItem extends Component {
   constructor(props) {
@@ -64,7 +64,7 @@ class BeerLocatorItem extends Component {
         return function () {
           infoWindow.setContent(html);
           infoWindow.open(map, marker);
-        }
+        };
       })(marker, i));
 
       map.fitBounds(bounds);
@@ -72,7 +72,7 @@ class BeerLocatorItem extends Component {
   }
   render() {
     return (
-      <div ref="map" className="map"></div>
+      <div ref="map" className="map map-container"></div>
     );
   }
 }

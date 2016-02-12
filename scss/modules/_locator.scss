@@ -1,5 +1,11 @@
 .map {
-  height: rem-calc(450);
+  height: rem-calc(320);
+  @include respond-to(s) {
+    height: rem-calc(450);
+  }
+  @include respond-to(xxl) {
+    height: rem-calc(600);
+  }
 }
 .info-wrapper {
   padding: rem-calc(10);
@@ -32,25 +38,43 @@
 }
 .locator {
   position: relative;
+  padding-left: rem-calc(20);
+  padding-right: rem-calc(20);
+  @include respond-to(breakpoint) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 .location-selectors {
-  position: absolute;
-  left: 50%;
-  bottom: rem-calc(50);
-  transform: translateX(-50%);
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: rem-calc(320);
+  margin: 0 auto;
+  font-size: 0;
+  margin-top: rem-calc(10);
+  @include respond-to(breakpoint) {
+    position: absolute;
+    left: 50%;
+    bottom: rem-calc(25);
+    transform: translateX(-50%);
+  }
 }
 .location-selector {
+  display: inline-block;
+  width: 48%;
   padding: rem-calc(15) rem-calc(30);
   font-size: rem-calc(18);
   color: color(creme-primary);
   text-transform: uppercase;
+  text-align: center;
   letter-spacing: 0.12rem;
   border: rem-calc(1) solid color(creme-primary);
   transition: 0.4s ease;
   &:first-of-type {
-    margin-right: rem-calc(10);
+    margin-right: 4%;
   }
-  &:hover {
+  &:hover, &.active {
     border-color: color(red-primary);
     background-color: color(red-primary);
   }

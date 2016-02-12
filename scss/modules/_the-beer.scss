@@ -14,7 +14,7 @@
     width: 50%;
     padding: 0 2rem;
   }
-  @include respond-to(breakpoint) {
+  @include respond-to(xl) {
     width: 33.33%;
     padding: 0 3rem;
   }

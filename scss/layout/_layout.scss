@@ -1,4 +1,4 @@
-section {
+.home-wrapper section {
 	width: 100%;
   padding-top: rem-calc(35);
   padding-bottom: rem-calc(35);
@@ -8,6 +8,25 @@ section {
   &:last-of-type {
     padding-bottom: 0;
   }
+  h1 {
+    position: relative;
+    text-align: center;
+    &:after {
+      content: '';
+      position: relative;
+      display: block;
+      width: rem-calc(118);
+      height: rem-calc(2);
+      background-color: color(creme-primary);
+      margin-top: rem-calc(15);
+      @extend %align-center;
+    }
+  }
+}
+section {
+  width: 100%;
+  padding-top: rem-calc(35);
+  padding-bottom: rem-calc(35);
   h1 {
     position: relative;
     text-align: center;
@@ -43,7 +62,7 @@ section {
     width: (1260 / 1440) * 100%;
     max-width: rem-calc(1260);
   }
-  @media screen and (min-width: 1400px) {
-    max-width: rem-calc(2200);
+  @include respond-to(xxl) {
+    max-width: rem-calc(1920);
   }
 }

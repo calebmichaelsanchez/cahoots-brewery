@@ -5,13 +5,12 @@ const employee = {
     this.toggleEmployeeMeta();
   },
   toggleEmployeeMeta () {
-    const toggle = $(".employee__meta");
-    const employeeContainer = toggle.closest(".employee");
+    let toggle = document.querySelector(".employee__meta");
 
     $(toggle).click(function(e) {
       e.preventDefault();
-      console.log(toggle.closest(".employee"));
-      $(this).parent().toggleClass("employee--open");
+      console.log(this);
+      //$(this).parent().toggleClass("employee--open");
     });
   }
 };

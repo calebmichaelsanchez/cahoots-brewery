@@ -15,5 +15,3 @@ let TaproomContainer = document.getElementById("the-taproom");
 if (TaproomContainer) {
   ReactDOM.render(<Taproom />, TaproomContainer);
 }
-
-export default Taproom;

@@ -66,4 +66,4 @@ SliderItem.propTypes = {
   items: React.PropTypes.array.isRequired
 }
 
-export default SliderItem;
+export default SliderItem

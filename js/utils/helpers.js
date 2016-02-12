@@ -1,18 +1,15 @@
 let helpers = {
   extend: function () {
-
     // Variables
     var extended = {};
     var deep = false;
     var i = 0;
     var length = arguments.length;
-
     // Check if a deep merge
     if ( Object.prototype.toString.call( arguments[0] ) === '[object Boolean]' ) {
       deep = arguments[0];
       i++;
     }
-
     // Merge the object into the extended object
     var merge = function (obj) {
       for ( var prop in obj ) {
@@ -26,15 +23,17 @@ let helpers = {
         }
       }
     };
-
     // Loop through each object and conduct a merge
     for ( ; i < length; i++ ) {
       var obj = arguments[i];
       merge(obj);
     }
-
     return extended;
-
+  },
+  stripHtmlTags: function(str) {
+    let tmp = document.createElement("DIV");
+    tmp.innerHTML = str;
+    return tmp.textContent || tmp.innerText || "";
   }
 }
 
