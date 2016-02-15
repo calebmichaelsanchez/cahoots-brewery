@@ -27,7 +27,7 @@ class Locator extends Component {
     return(
       <div className="locator">
         <h1>Find Our Beer</h1>
-        { <BeerLocatorContainer url={this.state.url} /> }
+        { <BeerLocatorContainer active={this.state.active} url={this.state.url} /> }
         <div className="location-selectors">
           <a href="#" className="location-selector active" data-url="/bottles" onClick={this.handleSetUrl}>Bottles</a>
           <a href="#" className="location-selector" data-url="/on-tap" onClick={this.handleSetUrl}>On Tap</a>

@@ -6,10 +6,22 @@ class BeerLocatorItem extends Component {
   constructor(props) {
     super(props);
     this.initMap = this.initMap.bind(this);
+    this.setActiveClass = this.setActiveClass.bind(this);
+    this.state = {
+      active: false
+    }
   }
   componentWillReceiveProps(nextProps) {
     let { title, items } = nextProps;
     this.initMap(items, title);
+    this.setState({ active: false });
+    this.setActiveClass();
+  }
+  componentDidMount() {
+    this.setActiveClass();
+  }
+  setActiveClass() {
+    window.setTimeout(() => { this.setState({ active: true }); }, 600);
   }
   initMap(markerArray, title) {
     let { extend } = helpers;
@@ -26,6 +38,7 @@ class BeerLocatorItem extends Component {
       zoom: 8,
       mapTypeId: 'roadmap',
       scrollwheel: false,
+      draggable: !("ontouchend" in document),
       styles: [
         {
           "stylers": [
@@ -49,7 +62,6 @@ class BeerLocatorItem extends Component {
         position: position,
         map: map,
         title: markers[i]["title"],
-        animation: google.maps.Animation.DROP,
         icon: image
       });
 
@@ -71,8 +83,11 @@ class BeerLocatorItem extends Component {
     }
   }
   render() {
+    let className = {
+      active: this.state.active ? "active" : ""
+    }
     return (
-      <div ref="map" className="map map-container"></div>
+      <div ref="map" className={`map map-container ${className.active}`}></div>
     );
   }
 }

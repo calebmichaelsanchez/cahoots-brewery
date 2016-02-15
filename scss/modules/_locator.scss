@@ -1,10 +1,16 @@
 .map {
+  opacity: 0;
+  transition: 0s ease;
   height: rem-calc(320);
   @include respond-to(s) {
     height: rem-calc(450);
   }
   @include respond-to(xxl) {
     height: rem-calc(600);
+  }
+  &.active {
+    opacity: 1;
+    transition: 0.6s ease;
   }
 }
 .info-wrapper {
