@@ -1,13 +1,25 @@
+.page-wrap {
+  padding-top: rem-calc(85);
+  position: relative;
+  &.nav-open {
+    overflow: auto;
+    height: auto;
+  }
+  @include respond-to(l) {
+    padding-top: 0;
+  }
+}
+.home-wrapper {
+  opacity: 0;
+  transition: 0.4s 0.4s ease;
+  &.active {
+    opacity: 1;
+  }
+}
 .home-wrapper section {
 	width: 100%;
   padding-top: rem-calc(35);
   padding-bottom: rem-calc(35);
-  &:first-of-type {
-    padding-top: rem-calc(70);
-  }
-  &:last-of-type {
-    padding-bottom: 0;
-  }
   h1 {
     position: relative;
     text-align: center;

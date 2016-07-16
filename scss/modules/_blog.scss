@@ -1,3 +1,10 @@
+.blog {
+  opacity: 0;
+  transition: 0.4s 0.4s ease;
+  &.active {
+    opacity: 1;
+  }
+}
 .blog-list {
   &-container {
     font-size: 0;
@@ -5,12 +12,18 @@
     padding-bottom: rem-calc(60) !important;
   }
   &__item {
-    width: 33.33%;
+    width: 100%;
     display: inline-block;
-    padding-left: rem-calc(20);
-    padding-right: rem-calc(20);
     vertical-align: top;
     margin-bottom: rem-calc(50);
+    @include respond-to(s) {
+      width: 50%;
+      padding-left: rem-calc(20);
+      padding-right: rem-calc(20);
+    }
+    @include respond-to(l) {
+      width: 33.33%;
+    }
     &-title {
       font-size: rem-calc(32);
       text-transform: uppercase;

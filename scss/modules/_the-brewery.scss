@@ -2,3 +2,6 @@ html .brewery-container, html .taproom-container {
   padding-left: 0;
   padding-right: 0;
 }
+html .brewery-container {
+  padding-top: rem-calc(70);
+}

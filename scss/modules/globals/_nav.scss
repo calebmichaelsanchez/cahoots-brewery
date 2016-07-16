@@ -1,29 +1,55 @@
+header {
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	transition: 0.4s ease;
+	z-index: 10000;
+	background-color: color(brown-primary);
+	font-size: 0;
+	.nav-open & {
+		background-color: color(creme-primary);
+	}
+	@include respond-to(l) {
+		position: relative;
+	}
+}
 nav {
 	display: block;
-	position: relative;
 	width: 100%;
-	max-height: 4.375rem;
-	z-index: 1000;
+	padding-left: rem-calc(10);
+	padding-right: rem-calc(10);
+	transition: none;
+	min-height: auto;
+	@include respond-to(breakpoint) {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: rem-calc(1260);
+	}
+	@include respond-to(xxl) {
+	  max-width: rem-calc(1920);
+	}
+	&.open {
+		transition: 0s linear;
+		min-height: auto;
+	}
 }
 .nav-header {
+	position: relative;
+	z-index: 2001;
 	padding: 1rem;
-	transition: background-color 0.4s ease;
-	@extend %clearfix;
-	&-item {
-		display: block;
-		float: left;
-		width: 50%;
-		&:last-of-type {
-			@extend %text-right;
-		}
-	}
-	&:after {
-		content: '';
+	font-size: 0;
+	@include respond-to(l) {
 		position: relative;
-		display: block;
-		width: 100%;
-		margin-top: 5px;
-		border-bottom: 1px solid transparent;
+		display: inline-block;
+		vertical-align: middle;
+		width: 50%;
+	}
+	&-item {
+		display: inline-block;
+		vertical-align: middle;
+		width: 50%;
+		&:last-of-type { @extend %text-right; }
 	}
 }
 .nav-logo {
@@ -31,18 +57,37 @@ nav {
 	opacity: 1;
 	visibility: visible;
 	transition: visibility 0s linear 0s, opacity 0.4s;
+	svg {
+		display: inline-block;
+		vertical-align: top;
+		width: rem-calc(50);
+		height: rem-calc(53);
+		fill: #fff;
+		transition: 0.4s ease;
+	}
 }
 .nav-toggle {
 	display: inline-block;
 	width: 30px;
-	height: 20px;
-	padding-top: 9px;
+	height: 25px;
 	vertical-align: middle;
+	text-align: right;
 	@extend %align-right;
+	@include respond-to(l) {
+		display: none;
+	}
+	&:before {
+		content: '';
+		display: inline-block;
+		height: 100%;
+		vertical-align: middle;
+		margin-right: -0.025rem;
+	}
 }
 .burger {
-	display: block;
+	display: inline-block;
 	position: relative;
+	vertical-align: middle;
 	width: 30px;
 	height: 2px;
 	background-color: color(creme-primary);
@@ -58,38 +103,100 @@ nav {
 		transition: all 0.4s;
 	}
 	&:before {
-		top: -8px;
+		top: -11px;
 	}
 	&:after {
-		top: 8px;
+		top: 11px;
 	}
 }
 .nav-menu {
 	position: absolute;
-	top: 100%;
+	top: 0;
 	left: 0;
 	width: 100%;
-	padding-left: 1em;
-	padding-right: 1em;
-	padding-bottom: 1em;
+	height: auto;
+	padding-top: rem-calc(85);
 	background-color: color(creme-primary);
-	opacity: 0;
-	transform: translateY(-200%);
-	visibility: hidden;
-	transition: visibility 0s linear 0.4s, opacity 0.4s ease, transform 0s linear 0.4s;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	padding-bottom: 3rem;
+	transform: translateY(-300%);
+	z-index: 2000;
+	transition: transform 0.4s ease;
+	@include respond-to(l) {
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		width: 50%;
+		padding: 1rem;
+		transform: none;
+		background-color: transparent;
+		text-align: right;
+	}
 }
 .nav-menu-item {
+	border-top: rem-calc(1) solid color(gray-secondary);
+	padding-top: rem-calc(10);
+	padding-bottom: rem-calc(10);
+	&:first-of-type > a { padding-top: 0; padding-bottom: 0; }
+	&:last-of-type{ border-bottom: rem-calc(1) solid color(gray-secondary); }
+	&:hover > a { color: color(red-primary); }
+	@include respond-to(l) {
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		border: none;
+		margin-right: rem-calc(25);
+		&:last-of-type{ border: none; }
+		&:hover > ul {
+			display: block;
+		}
+	}
 	a {
-		color: color(brown-primary);
+		display: block;
+		color: color(red-primary);
+		text-transform: uppercase;
+		letter-spacing: 0.12rem;
+		font-size: fs(p);
+		font-weight: fw(semi-bold);
+		@include respond-to(l) {
+			color: color(creme-primary);
+			transition: 0.2s ease;
+		}
+	}
+	> ul {
+		padding-left: rem-calc(10);
+		@include respond-to(l) {
+			display: none;
+			position: absolute;
+			width: 180px;
+			text-align: left;
+			padding: rem-calc(10);
+			margin: 0;
+			top: 100%;
+			left: -(rem-calc(10));
+			background-color: rgba(color(brown-primary), .8);
+		}
+	}
+	> ul li:hover a {
+		color: color(red-primary);
+	}
+	> ul li:first-of-type a {
+		padding-top: rem-calc(7);
+	}
+	> ul li:last-of-type a {
+		padding-bottom: 0;
+	}
+	> ul a {
+		color: color(gray-secondary);
+		padding-bottom: rem-calc(7);
+		@include respond-to(l) {
+			color: color(creme-primary);
+		}
 	}
 }
-.open {
-	max-height: 1000px;
-	.nav-header { background-color: color(creme-primary); }
-	.nav-header:after {
-		border-color: rgba(color(gray-secondary), .2);
-		transition: all 0.4s ease;
-	}
+
+.nav-open .open {
 	.nav-logo {
 		opacity: 0;
 		visibility: hidden;
@@ -106,8 +213,5 @@ nav {
 	}
 	.nav-menu {
 		transform: translateY(0);
-		opacity: 1;
-		visibility: visible;
-		transition: visibility 0s linear 0s, opacity 0.4s ease, transform 0s linear 0s;
 	}
 }

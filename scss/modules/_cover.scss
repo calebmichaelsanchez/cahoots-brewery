@@ -1,0 +1,68 @@
+.cover ~ footer {
+  display: none;
+}
+
+.cover {
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  text-align: center;
+  &:before {
+    content: '';
+    height: 100vh;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: -0.025rem;
+  }
+  &__item {
+    opacity: 0;
+    display: inline-block;
+    vertical-align: middle;
+    transition: 0.4s 0.4s ease;
+    &--loaded {
+      opacity: 1;
+    }
+    &-logo {
+      margin-bottom: rem-calc(100);
+      svg {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: rem-calc(85);
+        height: rem-calc(89);
+        path { fill: color(creme-primary); }
+      }
+    }
+  }
+  &__title {
+    font-size: rem-calc(48);
+    font-weight: fw(bold);
+    letter-spacing: 0.3rem;
+    color: color(creme-primary);
+    text-transform: uppercase;
+  }
+  &__buttons {
+    margin-top: rem-calc(100);
+    &-button {
+      display: inline-block;
+      min-width: rem-calc(145);
+      padding: rem-calc(15) rem-calc(30);
+      font-size: rem-calc(18);
+      color: color(creme-primary);
+      text-transform: uppercase;
+      text-align: center;
+      letter-spacing: 0.12rem;
+      border: rem-calc(1) solid color(creme-primary);
+      transition: 0.4s ease;
+      &:first-of-type {
+        margin-right: 4%;
+      }
+      &:hover, &.active {
+        border-color: color(red-primary);
+        background-color: color(red-primary);
+      }
+    }
+  }
+}

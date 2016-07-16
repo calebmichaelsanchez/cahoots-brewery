@@ -30,7 +30,7 @@
     letter-spacing: 0.12rem;
     font-weight: fw(bold);
   }
-  &-address, p {
+  &-address, p, ul {
     font-size: rem-calc(16);
     color: color(brown-secondary);
     margin: 0;
@@ -40,6 +40,9 @@
     &:first-of-type {
       margin-bottom: rem-calc(3);
     }
+  }
+  li {
+    margin-bottom: rem-calc(3);
   }
 }
 .locator {

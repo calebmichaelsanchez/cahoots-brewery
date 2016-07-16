@@ -9,9 +9,12 @@
   overflow: hidden;
   margin-bottom: rem-calc(40);
   width: 100%;
-  @include respond-to(mid-m) {
+  @include respond-to(s) {
     width: 50%;
     padding: rem-calc(15);
+  }
+  @include respond-to(breakpoint) {
+    width: 33.33%;
   }
   @include respond-to(l) {
     width: 25%;

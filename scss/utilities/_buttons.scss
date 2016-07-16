@@ -1,10 +1,13 @@
 .btn {
   display: inline-block;
-  min-width: rem-calc(200);
-  padding: rem-calc(22) rem-calc(10);
+  text-align: center;
+  min-width: rem-calc(170);
+  padding: rem-calc(18) rem-calc(10);
   font-size: fs(p);
   line-height: 1;
   text-decoration: none;
+  font-weight: fw(normal);
+  text-transform: none;
   &--primary {
     color: color(creme-primary);
     background-color: color(red-primary);

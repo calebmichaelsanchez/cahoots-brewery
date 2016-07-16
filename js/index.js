@@ -1,22 +1,32 @@
 import "babel-polyfill";
-import "./shims/classList.js";
-import "./utils/customFormat.js";
-import "./utils/closest.js";
-import nav from "./menus/nav";
-import employee from "./modules/Employee/employee";
-//import events from "./modules/Events/events";
-import "./modules/Events/index.js";
-import hours from "./modules/Hours/hours";
-import "./modules/BeerLocator/index.js";
-import "./modules/Sliders/Brewery/index.js";
-import "./modules/Sliders/Taproom/index.js";
+
+// Shims
+import "./shared/shims/classList.js";
+
+// Utility functions
+import "./shared/utils/customFormat.js";
+
+// Globals
+import "./screens/shared/Nav.js";
+import  "./screens/shared/components/Hours";
+
+// Cover Page
+import "./screens/Cover/index.js";
+
+// Home Page
+import "./screens/Home";
+import "./screens/Home/BeerLocator/index.js";
+import "./screens/Home/Events/index.js";
+import "./screens/Home/Sliders/Brewery/index.js";
+import "./screens/Home/Sliders/Taproom/index.js";
+import "./screens/Home/Jobs/index.js";
+
+// Blog Page
+import "./screens/Blog";
+
+// Store Page
+import "./screens/Store";
 
 var sheets = document.getElementsByTagName("link");
-//console.log(sheets);
-var sheet = sheets[4];
-//console.log(sheet);
-sheet.parentNode.removeChild(sheet);
-
-nav.init();
-hours.init();
-//events.init();
+var sheet = sheets[5];
+//sheet.parentNode.removeChild(sheet);

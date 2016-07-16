@@ -10,6 +10,7 @@ html {
 	}
 }
 html, body {
+	position: relative;
 	height: 100%;
 }
 img {
@@ -21,3 +22,40 @@ ul {
 	list-style: none;
 }
 
+.absolute-cart-box {
+	top: initial;
+	bottom: 15px;
+}
+.sqs-pill-shopping-cart-content {
+	height: auto;
+}
+.sqs-fullpage-shopping-cart-content {
+	padding: rem-calc(70);
+	color: color(creme-primary);
+}
+.sqs-fullpage-shopping-cart-content .cart-container table thead td {
+	font-size: rem-calc(18);
+}
+.sqs-fullpage-shopping-cart-content .cart-container table tr .item-desc .variant-info, .sqs-fullpage-shopping-cart-content .cart-container table tr .item-desc .additional-fields a {
+	font-size: rem-calc(16);
+}
+.sqs-fullpage-shopping-cart-content .cart-container table tr .item-desc a {
+	font-size: rem-calc(18);
+	line-height: rem-calc(24);
+}
+.sqs-fullpage-shopping-cart-content .cart-container table tr .quantity input {
+	color: color(black);
+}
+body:not(.button-style-default) .sqs-editable-button, body:not(.button-style-default) .sqs-editable-button-color {
+	display: inline-block;
+	min-width: rem-calc(180);
+	padding: rem-calc(18) rem-calc(10);
+	font-size: fs(p);
+	line-height: 1;
+	text-decoration: none;
+	color: color(creme-primary);
+	background-color: color(red-primary);
+	font-weight: fw(normal);
+	text-transform: none;
+	margin-top: rem-calc(20);
+}
