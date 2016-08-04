@@ -1,5 +1,3 @@
-import "babel-polyfill";
-
 // Shims
 import "./shared/shims/classList.js";
 
