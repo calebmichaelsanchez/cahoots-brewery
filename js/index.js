@@ -24,7 +24,3 @@ import "./screens/Blog";
 
 // Store Page
 import "./screens/Store";
-
-// var sheets = document.getElementsByTagName("link");
-// var sheet = sheets[5];
-//sheet.parentNode.removeChild(sheet);

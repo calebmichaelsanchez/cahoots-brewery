@@ -13,14 +13,12 @@ class EventsContainer extends Component {
   componentDidMount() {
     axios("/events?format=json")
       .then((response) => {
-        console.log(response);
         this.setState({
           upcoming: response.data.upcoming ? response.data.upcoming : [],
           title: response.data.collection.title
         });
       })
       .catch((response) => {
-        console.log(response);
         console.error("Request for collection failed");
       });
   }

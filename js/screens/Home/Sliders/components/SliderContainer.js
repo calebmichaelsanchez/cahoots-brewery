@@ -12,13 +12,11 @@ class SliderContainer extends Component {
   componentDidMount() {
     axios(this.props.url + "?format=json")
       .then((response) => {
-        console.log(response);
         this.setState({
           items: response.data.items
         });
       })
       .catch((response) => {
-        console.log(response);
         console.error("Request for collection failed");
       });
   }

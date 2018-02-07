@@ -13,7 +13,6 @@ class JobsContainer extends Component {
   componentDidMount() {
     axios("/jobs?format=json")
       .then((response) => {
-        console.log(response);
         this.setState({
           items: response.data.items ? response.data.items : [],
           title: response.data.collection.title,
@@ -21,7 +20,6 @@ class JobsContainer extends Component {
         });
       })
       .catch((response) => {
-        console.log(response);
         console.error("Request for collection failed");
       });
   }
